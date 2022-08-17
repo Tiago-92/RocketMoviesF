@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { FiMail, FiLock } from 'react-icons/fi';
 
 import { Contaneir, Form, Background } from './styles';
@@ -8,8 +10,14 @@ import { Button } from '../../components/Button';
 
 import { Link } from 'react-router-dom';
 
+export function SignIn() { 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-export function SignIn() {
+    function handleSignIn() {
+        console.log(email, password)
+    }
+
     return(
         <Contaneir>
             <Form>    
@@ -20,16 +28,18 @@ export function SignIn() {
                 <Input 
                     type="email"
                     icon={FiMail}
-                    placeholder="E-mail" 
+                    placeholder="E-mail"
+                    onChange={e => setEmail(e.target.value)} 
                 />
 
                 <Input 
                     type="password"
                     icon={FiLock}
-                    placeholder="Senha"                 
+                    placeholder="Senha"
+                    onChange={e => setPassword(e.target.value)}               
                 />
                     
-                <Button title="Entrar" />
+                <Button title="Entrar" onClick={handleSignIn}/>
 
                 <button className="createAccount">
                     <Link to="/register">

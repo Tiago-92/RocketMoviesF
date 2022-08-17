@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
+import { api } from '../../../../RocketMovies_backend/src/services/api' 
+
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Contaneir, Form, Background } from './styles';
 
@@ -13,12 +15,29 @@ import { Button } from '../../components/Button';
 export function SignUp() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState();
+    const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     function handleSignUp() {
-        console.log(name, email, password)
-    }
+        if(!name || !email || !password) {
+            return alert("Todos os campos devem ser preenchidos!");
+        }
+        
+        api.post("/users", { name, email, password })
+        .then(() =>{
+            alert("Usuário castrado com sucesso!")
+            navigate("/")
+        })
+        .catch(error => {
+            if(error.response) {
+                alert(error.response.data.message)
+            } else {
+                alert("Não foi possível cadastrar.")
+            }
+        })
 
+    }
 
     return(
         <Contaneir>
