@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { useAuth } from '../../../hooks/auth';
+
 import { FiMail, FiLock } from 'react-icons/fi';
 
 import { Contaneir, Form, Background } from './styles';
@@ -10,12 +12,14 @@ import { Button } from '../../components/Button';
 
 import { Link } from 'react-router-dom';
 
-export function SignIn() { 
+export function SignIn() {   
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const { sigIn } = useAuth();
+
     function handleSignIn() {
-        console.log(email, password)
+        sigIn({ email, password })
     }
 
     return(
