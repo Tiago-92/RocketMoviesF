@@ -1,7 +1,18 @@
 import { Input } from '../Input';
+
+import { api } from '../../../../RocketMovies_backend/src/services/api';
+
+import { useAuth } from '../../../hooks/auth';
+
 import { Container, Section, Profile } from './styles';
 
+import { Link } from "react-router-dom";
+
 export function Header(){
+    const { SignOut, user } = useAuth();
+
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
     return(
         <Container>
             <h1>
@@ -12,17 +23,23 @@ export function Header(){
                 <Input placeholder="Pesquisar por título" />
             </Section>
             
-            <Profile to="/profile">
-                <div className="flex">
-                    <p>Tiago Amaral</p>
-                    <span>sair</span>
-                </div>    
-            
-                <img src=
-                "https://github.com/Tiago-92.png" 
-                alt="imagem do usuário"
-                />
-            </Profile>            
+            <Profile>
+                <div>
+                    <p>{user.name}</p>
+                    <button 
+                        type="button" 
+                        onClick={SignOut}>
+                        Sair
+                    </button>
+                </div>
+                <button>
+                    <Link to="/profile">
+                        <img src={avatarUrl} 
+                        alt={user.name}
+                        />
+                    </Link>
+                </button>   
+            </Profile>                        
         </Container>
     )
 }
