@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 56px;
+
     display: flex;
     align-items: center;
-  
+    
     margin-top: 8px;
     
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};

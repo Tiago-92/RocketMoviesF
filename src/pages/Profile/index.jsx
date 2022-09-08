@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useAuth } from "../../../hooks/auth";
 
 import { api } from "../../../../RocketMovies_backend/src/services/api"
@@ -27,6 +29,12 @@ export function Profile() {
     const [avatar, setAvatar] = useState(avatarUrl);
     const [avatarFile, setAvatarFile] = useState(null);
 
+    const navigate = useNavigate();
+
+    function handleBack() {
+        navigate(-1);
+    }
+
     async function handleUpdate() {
         const updated = {
             name,
@@ -51,7 +59,7 @@ export function Profile() {
     return(
         <Container>
             <header>
-                <Back to="/">
+                <Back onClick={handleBack}>
                     <FiArrowLeft />
                     Voltar
                 </Back>

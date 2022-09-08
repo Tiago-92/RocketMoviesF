@@ -3,9 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.span`
     font-size: 12px;
 
-    margin-right: 10px;
-
-    margin-top: 40px;
+    margin-right: 8px;
 
     border-radius: 8px;
 

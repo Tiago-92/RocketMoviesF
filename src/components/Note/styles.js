@@ -1,19 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.button`
     display: flex;
     flex-direction: column;
-
-    width: 1080px;
+    
+    width: 1110px;
     height: 222px;
 
     padding: 32px;
    
-   margin-bottom: 40px;
-
-    > div {
-        margin-top: 5px;
-    }
+    margin-bottom: 40px;
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PINKGRAY};
 
@@ -21,20 +17,21 @@ export const Container = styled.div`
     border-radius: 16px;
 
     > h1 {
+        
         font-size: 24px;
         font-weight: 700;
         color: ${({ theme }) => theme.COLORS.WHITE};
     }
 
-    > p {
-        margin-top: 5px;
-        
+    > p {        
         text-align: justify;
         color: ${({ theme }) => theme.COLORS.GRAY};
+        margin-top: 15px;
     }
 
     > footer {
-        margin-top: 15px;
+        display: flex;
+        margin-top: 25px;
     }
 `;
 

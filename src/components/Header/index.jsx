@@ -1,3 +1,4 @@
+
 import { Input } from '../Input';
 
 import { api } from '../../../../RocketMovies_backend/src/services/api';
@@ -9,6 +10,7 @@ import { Container, Section, Profile } from './styles';
 import { Link } from "react-router-dom";
 
 export function Header(){
+   
     const { SignOut, user } = useAuth();
 
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
@@ -20,7 +22,7 @@ export function Header(){
             </h1>
 
             <Section>
-                <Input placeholder="Pesquisar por título" />
+                <Input placeholder="Pesquisar pelo título"/>
             </Section>
             
             <Profile>

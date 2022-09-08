@@ -3,25 +3,64 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
-
     display: grid;
     grid-template-areas:
     "header"
     "content";
+    width: 100%;
+    height: 100vh;
+    
+    > header {
+        display: grid;
+        grid-area: "header";
+        align-items: center;
+
+        padding-left: 123px;
+        padding-right: 123px;
+        
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
+
+        display: flex;
+        justify-content: space-between;
+        gap: 64px;
+        
+        width: 100%;
+        height: 116px;
+        border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
+    > button, .back {
+        font-size: 16px;
+        display: flex;
+        width: 100px;
+        height: 50px;
+        border: 1px solid gray;
+        
+
+        margin-left: 123px;
+        background: none;
+        border: none;
+
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
+        font-size: 16px;
+
+        margin-top: 40px;
+            
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+    }
 
     > main {
-        margin-top: 40px;
+        width: 1137px;
         margin-left: 123px;
-        margin-right: 106px;
+        margin-top: 24px;
+       
+        grid-area: "content";
 
-        width: 1100px;
-
-        padding-right: 15px;
-
-        grid-area: content;
         overflow-y: scroll;
+        
         &::-webkit-scrollbar {
             background: transparent;
             width: 9px;
@@ -36,82 +75,76 @@ export const Container = styled.div`
         &::-webkit-scrollbar-track-piece {
             color: black;
         }
-    }    
+    }
+`;
+
+export const Section = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 20px;
+   
+
+    > h2 {
+        color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+`;
+
+export const AddMovie = styled(Link)`
+    height: 56px;
+    width: 207px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+        
+    font-size: 16px;
+        
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_BLACK};
+        
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    > svg {
+        width: 20px;
+        height: 20px;
+    }
 `;
 
 export const Content = styled.div`
-    margin-bottom: 156px;
-    > button {
-            background-color: transparent;
-            border: none;
-            display: flex;
-            gap: 10px;
-            
-            align-items: center;
-
-            font-size: 16px;
-            color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
-        }
-
-        > h1 {
-            display: flex;
-            gap: 19px;
-            align-items: center;
-
-            font-size: 36px;
-            color: #F4EDE8;
-
-            margin-top: 24px;
-            margin-bottom: 24px;
-
-            > svg {
-                color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
-            }
-        }
-
-        > span {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-
-            font-size: 16px;
-            color: #F4EDE8;
-
-            > img {
-                width: 20px;
-                height: 20px;
-
-                border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_900};
-                border-radius: 50%;
-            }
-
-            > svg {
-                color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
-            }
-        }
-
-        > div {
-            margin-top: 40px;
-        }
-
-        > p {
-            font-size: 16px;
-            color:#F4EDE8;
-            text-align: justify;
-            line-height: 21px;
-            
-            margin-top: 40px;
-        }
+    width: 630px;
 `;
 
-export const Back = styled(Link)`
+export const Profile = styled.div`
     display: flex;
+    gap: 15px;
+    text-align: end;
     align-items: center;
-    gap: 8px;
 
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
-    font-size: 16px;
+    > div {
+        > p {
+            color: ${({ theme }) => theme.COLORS.WHITE};
+        }
+        > button {
+            background: none;
+            border: none;
+            color: ${({ theme }) => theme.COLORS.GRAY};
+         
+        }
+    }
     
-    background-color: transparent;
-    border: none;
-`;
+    > button, a {
+        background: none;
+        border: none;
+
+        > img {
+            width: 64px;
+            height: 64px;
+
+            border-radius: 50%;
+        }       
+    }
+`;    

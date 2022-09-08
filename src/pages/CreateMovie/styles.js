@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
-
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -44,17 +42,7 @@ export const Container = styled.div`
 export const Form = styled.form`
     margin-left: 5px;
     padding-right: 24px;
-
-    > .Button-back {
-        display: flex;
-        align-items: center;
-        background: transparent;
-        border: none;
-
-        font-size: 16px;
-        color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
-    }
-
+    
     > section {
         display: flex;
         gap: 40px;
@@ -92,7 +80,7 @@ export const Form = styled.form`
     }
 `;
 
-export const Back = styled(Link)`
+export const Back = styled.button`
     display: flex;
     align-items: center;
     gap: 8px;

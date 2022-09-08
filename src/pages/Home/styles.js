@@ -3,24 +3,50 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    width: 100%;
+   
     height: 100vh;
     display: grid;
+
+    width: 100%;
+
+    margin-right: 106px;
     grid-template-areas:
     "header"
     "content";
 
+    > header {
+        > h1 {
+            font-size: 24px;
+        }
+
+        display: grid;
+        grid-area: "header";
+        align-items: center;
+
+        padding-left: 123px;
+        padding-right: 123px;
+        
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_PINK};
+
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        
+        width: 100%;
+        height: 116px;
+        border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
     > main {
         display: grid;
 
-        width: 1100px;
+        width: 1129px;
         margin-right: 106px;
         margin-left: 123px;
 
         grid-area: "content";
         overflow-y: auto;
         
-
         &::-webkit-scrollbar {
             background: transparent;
             width: 9px;
@@ -39,14 +65,13 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.div`
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     height: 20px;
 
-    width: 1100px;
+    width: 1129px;
 
     margin: 50px 123px;
 
@@ -75,5 +100,42 @@ export const AddMovie = styled(Link)`
     > svg {
         width: 20px;
         height: 20px;
+    }
+`;
+
+export const Content = styled.div`
+    width: 630px;
+`;
+
+export const Profile = styled.div`
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+
+    text-align: end;
+
+    > div {
+        > p {
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            font-size: 14px;
+        }
+        > button {
+            background: none;
+            border: none;
+            color: ${({ theme }) => theme.COLORS.GRAY};          
+        }
+    }
+    
+    > button, a {
+        background: none;
+        border: none;
+
+        > img {
+            width: 64px;
+            height: 64px;
+
+            border-radius: 50%;
+        }       
     }
 `;

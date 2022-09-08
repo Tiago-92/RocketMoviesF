@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { Link } from 'react-router-dom';
-
 export const Container = styled.div` 
     align-items: center;
         
@@ -89,7 +87,7 @@ export const Avatar = styled.div`
     }    
 `;
 
-export const Back = styled(Link)`
+export const Back = styled.button`
     display: flex;
     align-items: center;
     gap: 8px;

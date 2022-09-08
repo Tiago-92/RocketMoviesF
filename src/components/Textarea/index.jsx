@@ -1,10 +1,11 @@
 import { Container } from './styles';
 
-export function Textarea() {
+export function Textarea({ onClick, ...rest }) {
     return(
         <Container 
-        placeholder=
-        "Observações">
+            placeholder="Descrição do filme"
+            {...rest}
+        >    
         </Container>
     )
 }
