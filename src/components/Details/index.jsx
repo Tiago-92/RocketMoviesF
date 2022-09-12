@@ -2,7 +2,7 @@ import { Container } from './styles';
 
 import { useAuth } from '../../../hooks/auth';
 
-import { api } from '../../../../RocketMovies_backend/src/services/api';
+import { api } from '../../../services/api';
 
 import { Tag } from '../../components/Tag';
 

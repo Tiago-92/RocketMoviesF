@@ -12,7 +12,7 @@ import { FiPlus} from 'react-icons/fi';
 
 import { Link } from "react-router-dom";
 
-import { api } from "../../../../RocketMovies_backend/src/services/api";
+import { api } from '../../../services/api';
 
 import { useAuth } from '../../../hooks/auth';
 

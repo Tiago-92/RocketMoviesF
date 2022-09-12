@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { api } from '../../RocketMovies_backend/src/services/api'
+import { api } from '../services/api';
 
 export const AuthContext = createContext({});
 

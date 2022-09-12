@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { api } from '../../../../RocketMovies_backend/src/services/api' 
+import { api } from '../../../services/api';
 
 import { FiMail, FiLock, FiUser, FiArrowLeft } from 'react-icons/fi';
 

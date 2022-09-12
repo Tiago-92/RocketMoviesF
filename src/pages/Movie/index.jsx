@@ -6,7 +6,7 @@ import { Container } from "./styles";
 
 import { FiArrowLeft } from 'react-icons/fi';
 
-import { api } from '../../../../RocketMovies_backend/src/services/api';
+import { api } from '../../../services/api';
 
 import { Header } from "../../components/Header";
 

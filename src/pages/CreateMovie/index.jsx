@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import { api } from "../../../../RocketMovies_backend/src/services/api";
+import { api } from '../../../services/api';
 
 import { Container, Form, Back } from "./styles";
 

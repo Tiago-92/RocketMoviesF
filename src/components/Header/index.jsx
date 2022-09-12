@@ -1,7 +1,7 @@
 
 import { Input } from '../Input';
 
-import { api } from '../../../../RocketMovies_backend/src/services/api';
+import { api } from '../../../services/api';
 
 import { useAuth } from '../../../hooks/auth';
 
