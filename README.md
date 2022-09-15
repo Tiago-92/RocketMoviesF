@@ -2,7 +2,7 @@ Nessa aplicação o usuário pode adicionar, listar e remover descrições de fi
 
 É possível criar uma conta para autenticação de usuário.
 
-O Backend da aplicação foi desenvolvido em Node.js e o projeto está nesse repositório: [RocketMovies_backend](https://github.com/Tiago-92/RocketMovies_backend)
+O Back-end da aplicação foi desenvolvido em Node.js e o projeto está nesse repositório: [RocketMovies_backend](https://github.com/Tiago-92/RocketMovies_backend)
 
 Deploy em https://rocketmoviesapp.netlify.app
 
