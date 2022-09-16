@@ -2,6 +2,8 @@ Nessa aplicação o usuário pode adicionar e listar descrições de filmes e ta
 
 É possível criar uma conta para autenticação de usuário.
 
+O Front foi desenvolvido em React + styled-components.
+
 O Back-end da aplicação foi desenvolvido em Node.js e o projeto está nesse repositório: [RocketMovies_backend](https://github.com/Tiago-92/RocketMovies_backend)
 
 Deploy em https://rocketmoviesapp.netlify.app
