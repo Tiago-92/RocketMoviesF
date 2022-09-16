@@ -1,4 +1,4 @@
-Nessa aplicação o usuário pode adicionar, listar e remover descrições de filmes e tags relacionadas ao gênero do filme, por exemplo: ação, ficção científica, comédia, etc.
+Nessa aplicação o usuário pode adicionar e listar descrições de filmes e tags relacionadas ao gênero do filme, por exemplo: ação, ficção científica, comédia, etc.
 
 É possível criar uma conta para autenticação de usuário.
 
